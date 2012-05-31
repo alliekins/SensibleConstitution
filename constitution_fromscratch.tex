@@ -1,0 +1,69 @@
+% Before making changes to this document:
+% -References are made between sections using the "hyperref" latex plugin.
+%  These will be automatically updated as changes occur. However, if a section
+%  or subsection is moved any references pointing to it must be updated manually.
+% -This document must be ratified by the House, physical copies printed, signed,
+%  notarized, and filed accordingly if changes are to be make official.
+
+\documentclass{article}
+%The "hyperref" LaTeX package allows for referencing.
+%The "xr-hyperref" LaTeX package allors for external referencing.
+\usepackage{hyperref}
+\usepackage{xr-hyperref}
+%The following package is useful for debugging label errors.
+%It must be commented out when compiling the final version.
+%\usepackage{showkeys}
+
+%Define the external document containing the bylaws to enable referencing.
+\externaldocument{bylaws}[https://github.com/ComputerScienceHouse/Constitution/blob/master/bylaws.pdf?raw=true]
+
+%Title page information:
+\title{Computer Science House Constitution}
+\author{Computer Science House Executive Board}
+%Last modified date:
+\newcommand{\datechanged}{Proposed: \today}
+\date{\datechanged}
+%Manually set the margins.
+\setlength{\evensidemargin}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlendth{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{8.5in}
+
+%Use "\article" for articles and "\asection" for sections of articles.
+%Commands to automatically generate labels for articles and subsections:
+\newcommand{\article}[1]{\section{#1} \label{#1}}
+\newcommand{\asection}[1]{\subsection{#1} \label{#1}}
+\newcommand{\asubsection}[1]{\subsubsection{#1} \label{#1}}
+\renewcommand{\thesection}{Article \Roman{section}}
+\renewcommand{\thesubsection}{Section \arabic{section}.\Alph{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{section}.\Alph{subsection}.\arabic{subsubsection}}
+
+%Define headings:
+\pagestyle{myheadings}
+\markright{{\rm CSH Constitution \hfill As of \datechanged \hfill Page }}
+
+%Example of reference syntax:
+% Test reference \ref{House Objectives} House Objectives.
+
+\begin{document}
+%Define title:
+\maketitle
+
+%Define articles:
+\article{Name}
+The name of this Special Interest House(hereon 'SIH') shall be Computer Science House(hereon 'CSH').
+
+\article{Derivation of Authority}
+CSH shall recognize that its right to function as an SIH is derived from the Department of Residence Life(hereon 'ResLife') in conjunction with the Residence Halls Association(hereon 'RHA').
+
+\article{House Objectives}
+The objectives of CSH are as follows:
+	\begin{enumerate}
+	\item To enhance the educational experience of its members via the provision of unique extra-curricular learning opportunities with an emphasis on computing.
+	\item To provide a variety of computing and networking services to its members, the RIT campus, and the Rochester Comminity at large.
+	\item To provide a friendly and comfortable living environment for its members within the RIT residence halls.
+\end{enumerate}
+
+\article{Constitutional Structure}
+\asection{House Charter}
